@@ -8,6 +8,7 @@ import android.widget.TextView;
 
 /**
  * Created by user on 2017/02/25.
+ * RecyclerViewに対応したAdapterのclassを生成
  */
 
 public class MyRecyclerAdapter extends RecyclerView.Adapter<MyRecyclerAdapter.ViewHolder> {
@@ -17,9 +18,9 @@ public class MyRecyclerAdapter extends RecyclerView.Adapter<MyRecyclerAdapter.Vi
     public static class ViewHolder extends RecyclerView.ViewHolder {
         public TextView mTextView;
 
-        public ViewHolder(TextView v) {
+        public ViewHolder(View v) {
             super(v);
-            mTextView = v;
+            mTextView = (TextView) v.findViewById(R.id.news_title);
         }
     }
 
@@ -31,9 +32,10 @@ public class MyRecyclerAdapter extends RecyclerView.Adapter<MyRecyclerAdapter.Vi
     public MyRecyclerAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
 
         View view = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.my_text_view, parent, false);
+                .inflate(R.layout.card_view, parent, false);
 
-        ViewHolder vh = new ViewHolder((TextView) view);
+
+        ViewHolder vh = new ViewHolder(view);
         return vh;
     }
 

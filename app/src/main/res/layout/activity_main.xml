@@ -33,21 +33,25 @@
         android:layout_weight="2">
 
         <Button
-            android:id="@+id/next_button"
+            android:id="@+id/linear_layout_button"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="next" />
+            android:text="Linear" />
 
         <Button
+            android:id="@+id/grid_layout_button"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            android:text="Grid" />
 
         <Button
+            android:id="@+id/staggered_layout_button"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            android:text="Staggered" />
 
     </LinearLayout>
 
