@@ -1,2 +1,2 @@
-# LayoutSumple
+# LayoutSample
 レイアウトのサンプルを表示するアプリ（ソース上に実装方法を覚え書き）
